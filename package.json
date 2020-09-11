@@ -16,10 +16,11 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start && yarn tslint-check",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "tslint-check": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
+    "test:stylelint": "npx stylelint 'src/**/*.css'",
+    "test:tslint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,6 +40,8 @@
   },
   "devDependencies": {
     "prettier": "^2.1.1",
+    "stylelint": "^13.7.0",
+    "stylelint-config-standard": "^20.0.0",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.3.0",
